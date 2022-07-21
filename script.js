@@ -83,35 +83,3 @@ const myChart = new Chart(ctx, {
     }
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-This problem was challenging, if anyone could help solve one of the below that would be great!!
-
-
--**Unable to access the JSON data**
-
--Border-radius not working on bottom-left, bottom-right bars
--Tooltip box does not go above the highest bar (the blue one)
--The numbers do not have dollar signs 
-
-*/
