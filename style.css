@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Primary */
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    /* Neutral */
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+
+    /* Border radius */
+    --border-radius-mobile: 1.1rem;
+    --border-radius-desktop: 1.5rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--cream);
+
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+}
+
+main {
+    width: 91%;
+}
+
+/* Balance container */
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--soft-red);
+
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius-mobile);
+    padding: 2rem 1.3rem 2rem 2rem;
+}
+
+.balance-and-amount {
+    color: white;
+}
+
+.balance-and-amount p {
+    margin-bottom: .6rem;
+    opacity: .8;
+
+    font-size: 1.6rem;
+}
+
+.balance-and-amount span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.balance-container img {
+    width: 7.7rem;
+    padding-right: inherit;
+}
+
+.balance-container img:hover {
+    animation: spin 1.5s ease forwards;
+    cursor: pointer;
+}
+
+/* Spending and total container */
+.spending-and-total-container {
+    background-color: white;
+
+    border-radius: var(--border-radius-mobile);
+    padding: 2.3rem 2rem 2.5rem 2rem;
+}
+
+/* Spending container */
+.spending-container {
+    padding-bottom: 2.4rem;
+    border-bottom: .1rem solid var(--cream);
+}
+
+.spending-container h1 {
+    margin-bottom: 3rem;
+
+    font-size: 2.4rem;
+    color: var(--dark-brown);
+}
+
+.canvas-container {
+    height: 19rem;
+}
+
+/* Total container */
+.total-container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 2.5rem;
+}
+
+.total-container p {
+    font-size: 1.7rem;
+    color: var(--medium-brown);
+}
+
+.total-container span {
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+
+.total-this-month-container p {
+    margin-bottom: .4rem;
+}
+
+.total-this-month-container span {
+    font-size: 3.35rem;
+}
+
+.percent-from-last-month-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    text-align: right;
+}
+
+.percent-from-last-month-container span {
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 40rem) {
+    main {
+        width: 40rem;
+    }
+
+    /* Balance container */
+    .balance-container {
+        border-radius: var(--border-radius-desktop);
+    }
+
+    .balance-and-amount p {
+        margin-bottom: .5rem;
+
+        font-size: 1.4rem;
+    }
+
+    .balance-container img {
+        width: 7rem;
+    }
+
+    /* Spending and total container */
+    .spending-and-total-container {
+        border-radius: var(--border-radius-desktop);
+        padding: 2.3rem 3rem 3.2rem 3rem;
+    }
+
+    /* Spending container */
+    .spending-container {
+        padding-bottom: 2.1rem;
+    }
+
+    .canvas-container {
+        height: 14.5rem;
+    }
+
+    /* Total container */
+    .total-container {
+        padding-top: 2rem;
+    }
+
+    .total-container p {
+        font-size: 1.35rem;
+    }
+
+    .total-this-month-container p {
+        margin-bottom: 0;
+    }
+
+    .percent-from-last-month-container span {
+        font-size: 1.35rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
